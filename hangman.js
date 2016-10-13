@@ -1,0 +1,61 @@
+//defining the variables
+var word = ["fox", "dog"];
+var randomWord = word[Math.floor(Math.random() * word.length)];
+var s;
+var count = 0;
+var answer = [];
+var answervalue = answer.toString()
+
+//setting up the new game
+
+function startUp(){
+	console.log("starting up")
+  for (var i = 0; i < randomWord.length; i++){
+    
+    answer[i] = "_";
+    
+  }
+  s = answer.join(" ");
+  document.getElementById("answer").innerHTML = s;
+}
+
+//Guessing the letter
+
+function guessLetter(){
+   console.log("guessing a letter")
+  var letter = document.getElementById("letter").value;
+  
+  if (letter.length > 0){
+  	 console.log("letter is longer than 0")
+    for (var i = 0; i <randomWord.length; i++){
+      if(randomWord[i] === letter){
+        answer[i] = letter;
+        gameover();
+      }
+    }
+    //counting the number of guesses
+    
+    count++;
+    document.getElementById("counter").innerHTML = "Number of guesses: " + count;
+    document.getElementById("answer").innerHTML = answer.join(" ");
+  }
+
+}
+
+//Winning message once word is guessed - Can't get this to display for some reason//
+function gameover(){
+console.log("if game is over")
+    // var win = document.getElementById(answer.length);
+
+    if (answer === word){
+         console.log("checking if the game is over?")
+         document.getElementById("win").innerHTML = "Game Over! You won!";
+     }
+
+}
+
+
+
+console.log(randomWord);
+console.log(answer);
+

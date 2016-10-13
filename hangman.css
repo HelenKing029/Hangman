@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    padding: 10px;
+}
+
+h1 {
+    color: #00A9A5;
+    font-family: Papyrus, fantasy;
+    font-size: 40px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26.4px;
+
+}
+
+#win {
+
+    color: cyan;
+    font-size: 15px;
+}
+
+#button{
+
+background-color: #7DCFB6;
+font-size: 15px;
+color: white;
+padding: 5px;
+
+}

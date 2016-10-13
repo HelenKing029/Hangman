@@ -30,8 +30,9 @@ function guessLetter(){
     for (var i = 0; i <randomWord.length; i++){
       if(randomWord[i] === letter){
         answer[i] = letter;
-        gameover();
+        
       }
+      gameover();
     }
     //counting the number of guesses
     
@@ -44,8 +45,12 @@ function guessLetter(){
 
 //Winning message once word is guessed - Can't get this to display for some reason//
 function gameover(){
-console.log("if game is over")
+console.log("in game is over")
     // var win = document.getElementById(answer.length);
+    console.log("answer", answer.toString())
+    console.log("word", word.toString())
+    console.log("comparing", answer.toString() === word.toString());
+
 
     if (answer === word){
          console.log("checking if the game is over?")

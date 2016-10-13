@@ -5,11 +5,12 @@ var s;
 var count = 0;
 var answer = [];
 var answervalue = answer.toString()
+var answerjoined = word.join("");
 
 //setting up the new game
 
 function startUp(){
-	console.log("starting up")
+  console.log("starting up")
   for (var i = 0; i < randomWord.length; i++){
     
     answer[i] = "_";
@@ -26,7 +27,7 @@ function guessLetter(){
   var letter = document.getElementById("letter").value;
   
   if (letter.length > 0){
-  	 console.log("letter is longer than 0")
+     console.log("letter is longer than 0")
     for (var i = 0; i <randomWord.length; i++){
       if(randomWord[i] === letter){
         answer[i] = letter;
@@ -50,9 +51,9 @@ console.log("in game is over")
     console.log("answer", answer.toString())
     console.log("word", word.toString())
     console.log("comparing", answer.toString() === word.toString());
+    var answerstring = answer.join("");
 
-
-    if (answer === word){
+    if (answerjoined === word){
          console.log("checking if the game is over?")
          document.getElementById("win").innerHTML = "Game Over! You won!";
      }

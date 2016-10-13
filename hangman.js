@@ -1,5 +1,5 @@
 //defining the variables
-var word = ["fox", "dog"];
+var word = ["fox"];
 var randomWord = word[Math.floor(Math.random() * word.length)];
 var s;
 var count = 0;

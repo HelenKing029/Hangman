@@ -39,7 +39,7 @@ function guessLetter(){
     
     count++;
     document.getElementById("counter").innerHTML = "Number of guesses: " + count;
-    document.getElementById("answer").innerHTML = answer.join(" ");
+    document.getElementById("answer").innerHTML = answer.join("");
   }
 
 }
@@ -48,19 +48,20 @@ function guessLetter(){
 function gameover(){
 console.log("in game is over")
     // var win = document.getElementById(answer.length);
+    
     console.log("answer", answer.toString())
-    console.log("word", word.toString())
-    console.log("comparing", answer.toString() === word.toString());
     var answerstring = answer.join("");
+  
+    console.log("AnswerJoined", answerstring)
+    console.log("word", word.toString())
 
-    if (answerjoined === word){
-         console.log("checking if the game is over?")
-         document.getElementById("win").innerHTML = "Game Over! You won!";
-     }
-
+    //comparing answer to word
+    console.log("comparing", answerstring === word.toString(""))
+ if (answerstring === word.toString("")) {
+    console.log("checking if the game is over?")
+    document.getElementById("win").innerHTML = "Game Over! You won!";
+    }
 }
-
-
 
 console.log(randomWord);
 console.log(answer);
